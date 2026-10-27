@@ -1,0 +1,18 @@
+stage: system
+modules:
+  flopr:        {source_files: [rtl/flopr.sv]}
+  flopenr:      {source_files: [rtl/flopenr.sv]}
+  adder:        {source_files: [rtl/adder.sv]}
+  mux2:         {source_files: [rtl/mux2.sv]}
+  imem:         {source_files: [rtl/imem.sv]}
+  regfile:      {source_files: [rtl/regfile.sv]}
+  extend:       {source_files: [rtl/extend.sv]}
+  maindec:      {source_files: [rtl/maindec.sv]}
+  aludec:       {source_files: [rtl/aludec.sv]}
+  controller:   {source_files: [rtl/controller.sv, rtl/maindec.sv, rtl/aludec.sv]}
+  alu:          {source_files: [rtl/alu.sv]}
+  mux3:         {source_files: [rtl/mux3.sv]}
+  datapath:     {source_files: [rtl/datapath.sv, rtl/flopr.sv, rtl/adder.sv, rtl/mux2.sv, rtl/mux3.sv, rtl/regfile.sv, rtl/extend.sv, rtl/alu.sv]}
+  riscvsingle:  {source_files: [rtl/riscvsingle.sv, rtl/controller.sv, rtl/maindec.sv, rtl/aludec.sv, rtl/datapath.sv, rtl/flopr.sv, rtl/adder.sv, rtl/mux2.sv, rtl/mux3.sv, rtl/regfile.sv, rtl/extend.sv, rtl/alu.sv]}
+  dmem:         {source_files: [rtl/dmem.sv]}
+  top:          {source_files: [rtl/top.sv, rtl/riscvsingle.sv, rtl/controller.sv, rtl/maindec.sv, rtl/aludec.sv, rtl/datapath.sv, rtl/flopr.sv, rtl/adder.sv, rtl/mux2.sv, rtl/mux3.sv, rtl/regfile.sv, rtl/extend.sv, rtl/alu.sv, rtl/imem.sv, rtl/dmem.sv]}
