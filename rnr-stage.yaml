@@ -1,9 +1,6 @@
 yaml_version: 1
 stage: system
 modules:
-  # keep your existing module entries here
-stage: system
-modules:
   flopr:        {source_files: [rtl/flopr.sv]}
   flopenr:      {source_files: [rtl/flopenr.sv]}
   adder:        {source_files: [rtl/adder.sv]}
